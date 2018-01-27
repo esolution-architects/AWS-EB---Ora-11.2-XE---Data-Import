@@ -33,9 +33,9 @@ Oracle Database Express Edition 11g Release 2 for Linux x64](http://www.oracle.c
     - DUMP_FILE: < Name of the dump file uploaded to the S3 bucket, i.e. data_dump.dmp >
     - REFRESH: < Set to 'true' if you're refreshing the data. Set to 'false' if you're importing the data in the database for this first time >
 
-  Note: If the REFRESH variable is set to true, this source will drop the user and Tablespace, before creating a new user and tablespace. Otherwise, this will just create a new user and tablespace, without attempting to drop the user/tablespace.
+  Note: If the REFRESH variable is set to true, this source will drop the user and tablespace, before creating a new user and tablespace. Otherwise, this will just create a new user and tablespace, without attempting to drop the user/tablespace.
 
-  After launching the Environment, it will build your environment and perform the data import. The Environemnt will remain in grey status until the import is complete. Once completed, download the full logs and verify the import was successful (usually found in eb-activity.log and eb-docker/containers/eb-current-app/<container-id>-stdouterr.log). If the import was successful, terminate the environment and delete the application.
+  After launching the Environment, it will build your environment and perform the data import. The Environemnt will remain in grey status until the import is complete. Once completed, download the full logs and verify the import was successful (usually found in eb-activity.log and eb-docker/containers/eb-current-app/< container-id >-stdouterr.log). If the import was successful, terminate the environment and delete the application.
 
 
 
