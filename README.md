@@ -1,9 +1,9 @@
-#AWS Elastic Beanstalk - Oracle 11.2 XE - Data Import
+# AWS Elastic Beanstalk - Oracle 11.2 XE - Data Import
 
 This will deploy an Oracle 11.2 XE databse and run SQL commands. Intended to import data into a database with Oracle's exp/imp commands.
 
 
-##Instructions:
+## Instructions:
 1) Get the dump file from the source database using the 11.2 exp utility provided by Oracle
 2) Downoad this source, customize it to fit your needs. Zip it up.
 3) Create an S3 bucket and upload your data dump file and [ 
@@ -21,17 +21,17 @@ Oracle Database Express Edition 11g Release 2 for Linux x64](http://www.oracle.c
   - Root volume type: General Purpose SSD 
   - Root volume size: 20 gigs + the size of your dump file (uncompressed)
   - Env Variables:
-    - HOST: <Host name of the Destination Database>
-    - SID: <SID of the Destination Database>
-    - PORT: <Port of the Destination Database>
-    - USER_NAME_ROOT: <Root username of the Destination Database>
-    - PASSWORD_ROOT: <Root password of the Destination Database>
-    - USER_NAME: <Username of the user to create in the Destination Database>
-    - PASSWORD: <Password of the user to create in the Destination Database>
-    - TABLESPACE: <Tablespace name to create in the Destination Database>
-    - SETUP_BUCKET: <Name of the S3 bucket created>
-    - DUMP_FILE: <Name of the dump file uploaded to the S3 bucket, i.e. data_dump.dmp>
-    - REFRESH: <Set to 'true' if you're refreshing the data. Set to 'false' if you're importing the data in the database for this first time>
+    - HOST: < Host name of the Destination Database >
+    - SID: < SID of the Destination Database >
+    - PORT: < Port of the Destination Database >
+    - USER_NAME_ROOT: < Root username of the Destination Database >
+    - PASSWORD_ROOT: < Root password of the Destination Database >
+    - USER_NAME: < Username of the user to create in the Destination Database >
+    - PASSWORD: < Password of the user to create in the Destination Database >
+    - TABLESPACE: < Tablespace name to create in the Destination Database >
+    - SETUP_BUCKET: < Name of the S3 bucket created >
+    - DUMP_FILE: < Name of the dump file uploaded to the S3 bucket, i.e. data_dump.dmp >
+    - REFRESH: < Set to 'true' if you're refreshing the data. Set to 'false' if you're importing the data in the database for this first time >
 
   Note: If the REFRESH variable is set to true, this source will drop the user and Tablespace, before creating a new user and tablespace. Otherwise, this will just create a new user and tablespace, without attempting to drop the user/tablespace.
 
