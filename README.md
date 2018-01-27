@@ -8,7 +8,7 @@ This will deploy an Oracle 11.2 XE databse and run SQL commands. Intended to imp
 2) Downoad this source, customize it to fit your needs. Zip it up.
 3) Create an S3 bucket and upload your data dump file and [ 
 Oracle Database Express Edition 11g Release 2 for Linux x64](http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html) file.
-  - The files should be uploaded to this location: s3://<S3 Bucket Name>/oracle/<files>
+  - The files should be uploaded to this location: s3://< S3 Bucket Name >/oracle/< files >
   - The data dump file should have a '.dmp' file extension.
   - Make note the size of the uncompressed dump file 
 4) Create an empty Oracle RDS instance. Make note the host name, sid, port, root username, root password. 
